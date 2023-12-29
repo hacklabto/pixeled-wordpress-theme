@@ -48,8 +48,8 @@
 <?php endif; ?>
 
 <div id="nextprevious">
-<div class="alignleft"><?php posts_nav_link('','','&laquo; PREVIOUS ENTRIES') ?></div>
-<div class="alignright"><?php posts_nav_link('','NEXT ENTRIES &raquo;','') ?></div>
+<div class="alignleft"><?php next_posts_link('&laquo; OLDER ENTRIES') ?></div>
+<div class="alignright"><?php previous_posts_link('NEWER ENTRIES &raquo;','') ?></div>
 <div class="cleared"></div>
 </div>
 </div> <!-- Closes contentwrapper-->

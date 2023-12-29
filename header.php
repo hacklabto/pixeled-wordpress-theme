@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <?php wp_head(); ?>
 
 <!-- this product is released under General Public License. Please see the attached file for details. You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
@@ -45,7 +46,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 
 <!--[if lt IE 7]>
 <link href="<?php bloginfo('template_url'); ?>/ie6.css" rel="stylesheet" type="text/css" />
-<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
+<script src="https://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
 <![endif]-->
 
 
@@ -57,18 +58,24 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 
 <div id="header">
 
+<!--
 <div id="logo">
 <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
 <span><?php bloginfo('description'); ?></span>
 </div>
-
+-->
+<div id="logo" style="margin: 15px 0 0 0;">
+<a href="<?php echo get_option('home'); ?>">
+<img src="/wp-content/uploads/2015/05/hacklab-logo-wide-3.png" border=0 alt="Hacklab.TO">
+</a>
+</div>
 
 <div id="topright">
-<ul>
-  <?php wp_list_pages('depth=1&title_li=0&sort_column=menu_order'); ?>
+<!-- <ul>
+ <?php wp_list_pages('depth=1&title_li=0&sort_column=menu_order'); ?>
   <li><a href="#searchform">search</a></li>
-  <li><a href="#main">skip to content &darr;</a></li>
-</ul>
+ <li><a href="#main">skip to content &darr;</a></li> 
+</ul> -->
 </div>
 
 </div> <!-- Closes header -->
@@ -78,8 +85,10 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 <div id="catnav">
 <div id="toprss"><a href="feed:<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/rss-trans.png" alt="<?php bloginfo('name'); ?>" width="65" height="24" /></a></div> <!-- Closes toprss -->
 <ul id="nav">
-  <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
-  <?php wp_list_categories('sort_column=name&title_li=&depth=2'); ?>
+<li><a href="<?php echo get_option('home'); ?>">Home</a></li>
+<?php wp_list_pages('depth=1&title_li=0&sort_column=menu_order'); ?>
+<!--  <?php wp_list_categories('sort_column=name&title_li=&depth=2'); ?> -->
+<li class="page_item"><a href="https://knowledge.hacklab.to/wiki/">Public Wiki</a></li>
 </ul>
 </div> <!-- Closes catnav -->
 

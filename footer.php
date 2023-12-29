@@ -10,15 +10,15 @@
 </div>
 
 <div class="col2">
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer_middle') ) : ?>
-<h3>Visit our friends!</h3><p>A few highly recommended friends...</p><ul><?php wp_list_bookmarks('title_li=&categorize=0'); ?></ul>
-<?php endif; ?>
+<!-- <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer_middle') ) : ?>
+<h3>Visit our friends!</h3><p>A few highly recommended friends...</p><ul><?php wp_list_bookmarks('title_li=&categorize=0'); ?></ul> 
+<?php endif; ?> -->
 </div>
 
 <div class="col3">
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer_right') ) : ?>
+<!-- <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer_right') ) : ?>
 <h3>Archives</h3><p>All entries, chronologically...</p><ul><?php wp_get_archives('type=monthly&limit=12'); ?> </ul>
-<?php endif; ?>
+<?php endif; ?> -->
 </div>
 
 <div class="cleared"></div>
@@ -30,6 +30,7 @@
 <div id="footerleft">
 <p>Powered by <a href="http://www.wordpress.org/">WordPress</a> and <a href="http://samk.ca/freebies/" title="WordPress theme">pixeled</a>. Sweet icons by <a href="http://famfamfam.com/">famfamfam</a>. <a href="#main">Back to top &uarr;</a></p>
 <!-- Please don't remove my credits! I worked hard to create this theme and distribute it freely. Thanks! -->
+<p><a href="http://akismet.com/">Protected by Akismet</a> | <a href="http://wordpress.com/">Blog with WordPress</a></p>
 </div>
 
 <div id="footerright">

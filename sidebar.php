@@ -35,14 +35,28 @@
 <ul>
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar_left') ) : ?>
 
-<li>
+<!-- <li>
 <div class="sidebarbox">
 <h2>Categories</h2>
 <ul>
   <?php wp_list_categories('show_count=0&title_li='); ?>
 </ul>
 </div>
+</li> -->
+<li>
+<div class="sidebarbox">
+<h2>Meta</h2>
+<ul>
+  <?php wp_register(); ?>
+  <li><?php wp_loginout(); ?></li>
+  <li><a href="http://validator.w3.org/check/referer" title="This page validates
+ as XHTML 1.0 Transitional">Valid <abbr title="eXtensible HyperText Markup Langu
+age">XHTML</abbr></a></li>
+  <?php wp_meta(); ?>
+</ul>
+</div>
 </li>
+
 
 <?php endif; ?>
 </ul>
@@ -54,6 +68,7 @@
 <ul>
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar_right') ) : ?>
 
+<!-- 
 <li>
 <div class="sidebarbox">
 <h2>Meta</h2>
@@ -65,6 +80,7 @@
 </ul>
 </div>
 </li>
+-->
 
 <?php endif; ?>
 </ul>
